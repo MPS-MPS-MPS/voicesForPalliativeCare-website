@@ -190,7 +190,7 @@ body {
 }
 
 .who-title {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 800;
     background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
     -webkit-background-clip: text;
@@ -213,3 +213,34 @@ body {
     line-height: 1.7;
     text-align: center;
 } 
+
+.consumer-title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.consumer-content {
+    font-size: 1.5rem;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.consumer-content-section {
+    margin: 1rem 0 6rem 0;
+}
+
+.consumer-involv {
+
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+}

@@ -1,9 +1,9 @@
 /* CSS Custom Properties */
 :root {
-  --font-title-1: 2.8rem;
-  --font-2ndary: 1.9rem;
-  --font-body: 1.3rem;
-  --font-title-large: 5rem;
+  --font-title-1: clamp(1.7rem, 4vw, 2.8rem);
+  --font-2ndary: clamp(1.2rem, 2.5vw, 1.9rem);
+  --font-body: clamp(1rem, 2vw, 1.5rem);
+  --font-title-large: clamp(2.2rem, 7vw, 6rem);
 }
 
 /* Reset and Base Styles */
@@ -38,26 +38,28 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: visible;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 2rem 0;
-    min-height: 120px;
-    gap: 3rem;
+    padding: 1.2rem 0 !important;
+    min-height: 80px !important;
+    gap: 1.5rem !important;
 }
 
 .logo-left {
     flex-shrink: 0;
-    margin-left: -20rem;
-    padding-right: 10rem;
+    margin-left: 0 !important;
+    padding-right: 2rem !important;
 }
 
 .logo {
-    height: 100px;
+    height: 70px;
     width: auto;
+    max-width: 180px;
     object-fit: contain;
 }
 
@@ -73,7 +75,7 @@ body {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 3rem;
+    gap: 1.5rem !important;
     margin: 0;
     padding: 0;
     justify-content: space-between;
@@ -86,19 +88,19 @@ body {
     text-decoration: none;
     color: #1e293b;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.2rem !important;
     transition: all 0.3s ease;
     position: relative;
     border-radius: 12px;
     letter-spacing: 0.5px;
     white-space: nowrap;
-    padding: 0.75rem 2rem;
+    padding: 0.5rem 1.2rem !important;
     border: 2px solid transparent;
-    min-width: 180px;
+    min-width: 120px !important;
     justify-content: center;
     background: none;
     box-sizing: border-box;
-    height: 80px;
+    height: 60px !important;
 }
 
 .nav-link.get-involved {
@@ -234,13 +236,13 @@ body {
     bottom: 0;
     background: url('../assets/hannah-busing-Zyx1bK9mqmA-unsplash.jpg') center/cover;
     opacity: 0.5;
-    z-index: 1;
+    z-index: 2;
     transform: scalex(-1);
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
@@ -262,39 +264,51 @@ body {
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: flex-start;
     flex-wrap: wrap;
     animation: fadeInUp 1s ease 0.4s both;
 }
 
 .hero-gradient-box {
   background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 120px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 48px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  padding: 3rem 4rem 3rem 3rem;
   box-shadow: 0 8px 32px rgba(100,30,148,0.10);
   color: #fff;
-  max-width: 3000px;
+  max-width: 750px;
+  width: 90vw;
   text-align: left;
-  margin: 2rem 0 2rem 0;
+  margin: 10rem auto 2rem 0;
   position: relative;
-  left: -30rem;
-} 
+  padding: clamp(1.2rem, 4vw, 3rem) clamp(1rem, 6vw, 4rem) clamp(1.2rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem);
+  margin-left: 0;
+  margin-right: auto;
+  left: -17vw;
+}
+
+.hero-gradient-box .hero-title {
+  font-size: clamp(1.8rem, 4vw, 4rem);
+}
+
+.hero-gradient-box .hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
 
 /* Button Styles */
 .btn {
     display: inline-block;
-    padding: 20px 65px;
+    padding: 15px 35px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
 }
 
 .btn-primary {
@@ -411,8 +425,6 @@ body {
     margin-bottom: 1rem;
     color: #1e293b;
 }
-
-
 
 .collaborate-list {
     list-style: none;
@@ -678,129 +690,220 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1100px;
+    }
     .header-content {
-        flex-wrap: wrap;
-        padding: 1.5rem 0;
-        min-height: 100px;
+        gap: 1.2rem;
+        padding: 1.2rem 0;
     }
-    
-    .logo-left {
-        gap: 1.5rem;
-    }
-    
-    .logo-right {
-        gap: 1.5rem;
-    }
-    
     .logo {
         height: 70px;
     }
-    
-    .nav {
-        flex: none;
-        display: none;
-        margin: 0;
-        width: 100%;
-        order: 3;
+    .nav-link {
+        font-size: 1.3rem;
+        min-width: 140px;
+        height: 60px;
+        padding: 0.5rem 1.2rem;
     }
-    
-    .nav-list {
-        flex-direction: column;
+    .hero-gradient-box {
+        padding: 2.2rem 2.5rem 2.2rem 2rem;
+        max-width: 700px;
+        left: 0;
+    }
+    .hero-title {
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+    }
+    .hero-subtitle {
+        font-size: clamp(1.1rem, 2vw, 1.3rem);
+    }
+    .about-grid, .collaborate-content, .contact-content, .events-grid {
         gap: 1.5rem;
     }
-    
-    .nav-link {
-        font-size: 1.2rem;
-        padding: 1.2rem 2rem;
+    .about-card, .contact-form {
+        padding: 1.2rem;
     }
-    
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
-    .mobile-menu-toggle span {
-        width: 32px;
-        height: 4px;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .collaborate-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .event-card {
-        flex-direction: column;
-    }
-    
-    .event-date {
-        flex-direction: row;
-        gap: 1rem;
-        padding: 1rem;
+    .btn {
+        padding: 14px 36px;
+        font-size: 1.1rem;
     }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 1100px) {
     .container {
-        padding: 0 15px;
+        max-width: 900px;
     }
-    
     .header-content {
+        gap: 0.8rem;
         padding: 1rem 0;
-        min-height: 80px;
     }
-    
     .logo {
         height: 60px;
     }
-    
     .nav-link {
         font-size: 1.1rem;
-        padding: 1rem 1.5rem;
+        min-width: 110px;
+        height: 48px;
+        padding: 0.4rem 0.7rem;
     }
-    
+    .hero-gradient-box {
+        padding: 1.5rem 1.2rem 1.5rem 1rem;
+        max-width: 500px;
+    }
     .hero-title {
-        font-size: 2rem;
+        font-size: clamp(1.7rem, 4vw, 2.5rem);
     }
-    
-    .section {
-        padding: 3rem 0;
+    .about-card, .contact-form {
+        padding: 0.8rem;
     }
-    
-    .about-card,
-    .contact-form {
-        padding: 1.5rem;
-    }
-    
-    .logo-left,
-    .logo-right {
-        flex-direction: column;
-        gap: 0.5rem;
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 }
+@media (max-width: 1024px) {
+    .container {
+        max-width: 98vw;
+        padding: 0 6px;
+    }
+    .header-content {
+        gap: 0.5rem;
+        padding: 0.7rem 0;
+    }
+    .logo {
+        height: 48px;
+    }
+    .nav-link {
+        font-size: 1rem;
+        min-width: 90px;
+        height: 40px;
+        padding: 0.3rem 0.5rem;
+    }
+    .hero-gradient-box {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        max-width: 98vw;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 24px;
+    }
+    .hero-title {
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+    }
+    .about-card, .contact-form {
+        padding: 0.5rem;
+    }
+    .btn {
+        padding: 7px 10px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        min-height: 80px;
+        gap: 1rem;
+    }
+    .logo {
+        height: 50px;
+    }
+    .logo-left {
+        margin-left: 0;
+        padding-right: 0;
+    }
+    .nav-link {
+        font-size: 1rem;
+        min-width: 100px;
+        height: 48px;
+        padding: 0.5rem 0.5rem;
+    }
+    .hero-gradient-box {
+        left: 0;
+        margin: 1rem 0;
+        padding: 2rem 1rem 2rem 1rem;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 40px;
+    }
+    .hero-title {
+        font-size: var(--font-title-large);
+    }
+    .hero-subtitle {
+        font-size: var(--font-body);
+    }
+    .btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+    .about-grid, .collaborate-content, .contact-content, .events-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+    }
+    .about-card, .contact-form {
+        padding: 1rem;
+    }
+    .collaborate-image img {
+        height: 220px;
+    }
+    .event-card {
+        flex-direction: column;
+    }
+    .event-date {
+        min-width: 70px;
+        padding: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 0 8px;
+    }
+    .hero-gradient-box {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 24px;
+    }
+    .btn {
+        padding: 7px 14px;
+        font-size: 0.95rem;
+    }
+    .about-card, .contact-form {
+        padding: 0.7rem;
+    }
+    .collaborate-image img {
+        height: 120px;
+    }
+}
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.2rem;
+    }
+    .btn {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+    }
+    .about-card, .contact-form {
+        padding: 0.3rem;
+    }
+}
+
+/* Make all images max-width 100% and height auto */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Prevent horizontal scroll on all sections */
+.section, .section-alt, .footer, .header, .hero {
+    overflow-x: hidden;
+}
+
+/* --- Prevent Header Bar Scrolling on Dropdown --- */
+.header, .header-content, .nav, .nav-list {
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+.dropdown-menu {
+  position: absolute;
+  z-index: 1001;
+}
+/* --- End --- */

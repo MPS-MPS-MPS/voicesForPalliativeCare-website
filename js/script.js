@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(this);
             const name = this.querySelector('input[type="text"]').value;
             const email = this.querySelector('input[type="email"]').value;
-            const subject = this.querySelector('input[placeholder="Subject"]').value;
             const message = this.querySelector('textarea').value;
             
             // Basic validation
@@ -177,6 +176,52 @@ const additionalStyles = `
         animation: slideDown 0.3s ease;
     }
     
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .mobile-menu-toggle {
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1100;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0.75rem;
+        border-radius: 12px;
+        transition: all 0.3s;
+        background: none;
+        border: none;
+    }
+    @media (min-width: 781px) {
+        .mobile-menu-toggle {
+            display: none !important;
+        }
+    }
+    .mobile-menu-toggle span {
+        width: 36px;
+        height: 5px;
+        background: #1e293b;
+        border-radius: 3px;
+        transition: all 0.3s;
+        display: block;
+        transform-origin: left center;
+    }
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    
     .nav.active .nav-list {
         flex-direction: column;
         gap: 1.5rem;
@@ -193,22 +238,23 @@ const additionalStyles = `
         transition: all 0.3s ease;
     }
     
+    /* Preserve Get Involved button color in mobile menu */
+    .nav.active .nav-link.get-involved {
+        background: linear-gradient(120deg, #641e94 0%, #667eea 100%) !important;
+        color: #fff !important;
+        border: 2px solid rgba(147,51,234,0.3);
+        box-shadow: none;
+    }
+    .nav.active .nav-link.get-involved:hover {
+        background: linear-gradient(120deg, #764ba2 0%, #667eea 100%) !important;
+        color: #fff !important;
+        border: 2px solid #764ba2;
+    }
+    
     .nav.active .nav-link:hover {
         background: rgba(37, 99, 235, 0.15);
         transform: translateY(-3px);
         box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
-    }
-    
-    .mobile-menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    
-    .mobile-menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(8px, -8px);
     }
     
     .header.scrolled {

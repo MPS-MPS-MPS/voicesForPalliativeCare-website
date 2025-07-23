@@ -86,21 +86,21 @@
   }
   
   .nav-link.get-involved {
-    background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
+    background: linear-gradient(120deg, #189dac 0%, #43c6db 100%);
     color: #fff;
-    border: 2px solid rgba(147,51,234,0.3);
+    border: 2px solid rgba(24,157,172,0.3);
   }
   
   .nav-link:hover {
-    color: #641e94;
-    background: rgba(100,30,148,0.1);
+    color: #189dac;
+    background: rgba(24,157,172,0.1);
     transform: translateY(-2px);
   }
   
   .nav-link.get-involved:hover {
     color: #fff;
-    background: linear-gradient(120deg, #764ba2 0%, #667eea 100%);
-    border: 2px solid #764ba2;
+    background: linear-gradient(120deg, #43c6db 0%, #189dac 100%);
+    border: 2px solid #43c6db;
   }
   
   /* Dropdown styles */
@@ -124,7 +124,7 @@
     top: 100%;
     background: #fff;
     min-width: 100%;
-    box-shadow: 0 8px 24px rgba(100,30,148,0.10);
+    box-shadow: 0 8px 24px rgba(24,157,172,0.10);
     border-radius: 0 0 12px 12px;
     z-index: 1001;
     list-style: none;
@@ -139,7 +139,7 @@
     display: block;
     width: 100%;
     padding: 1rem 1.5rem;
-    color: #641e94;
+    color: #189dac;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.5rem;
@@ -149,8 +149,8 @@
   }
   
   .dropdown-link:hover {
-    background: rgba(100,30,148,0.08);
-    color: #333;
+    background: rgba(24,157,172,0.08);
+    color: #12707c;
   }
   
   .mobile-menu-toggle {
@@ -182,7 +182,7 @@
   .team-title {
       font-size: 5rem;
       font-weight: 800;
-      background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
+      background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #c9f2f8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -210,18 +210,18 @@
       border-radius: 18px;
       margin: 2.5rem 0;
       padding: 1.2rem 1.5rem;
-      box-shadow: 0 4px 24px rgba(100,30,148,0.07);
+      box-shadow: 0 8px 24px rgba(24,157,172,0.07);
   }
   
   .member-title {
       font-size: 2rem;
       font-weight: 900;
-      background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
+      background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #a2ebf7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
-      margin-bottom: .5rem;
+      margin-bottom: 1rem;
       letter-spacing: 1px;
   }
   
@@ -231,7 +231,7 @@
       object-fit: unset;
       background: none;
       border-radius: 0 !important;
-      box-shadow: 0 2px 12px rgba(100,30,148,0.08);
+      box-shadow: 0 2px 12px rgba(24,157,172,0.08);
       flex-shrink: 0;
       display: block;
       margin-bottom: 20px;
@@ -339,7 +339,7 @@
 }
 
 .team-banner {
-  background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
+  background: linear-gradient(5deg, #dcf4f8 0%, #43c6db 20%, #118b9e 50%, #43c6db 80%, #dcf4f8 100%);
   color: #fff !important;
   padding: 2.2rem 0;
   border-radius: 0;
@@ -351,7 +351,7 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  box-shadow: 0 4px 18px rgba(100,30,148,0.10);
+  box-shadow: 0 4px 18px rgba(24,157,172,0.10);
   text-align: center;
   margin-top: 0;
 }

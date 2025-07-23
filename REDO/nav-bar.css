@@ -28,7 +28,7 @@ body {
 
 /* Header Styles */
 .header {
-  background: rgba(255, 255, 255, 0.98);
+  background: #fff;
   backdrop-filter: blur(15px);
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -86,21 +86,21 @@ body {
 }
 
 .nav-link.get-involved {
-  background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
+  background: linear-gradient(120deg, #189dac 0%, #43c6db 100%);
   color: #fff;
-  border: 2px solid rgba(147,51,234,0.3);
+  border: 2px solid rgba(24,157,172,0.3);
 }
 
 .nav-link:hover {
-  color: #641e94;
-  background: rgba(100,30,148,0.1);
+  color: #189dac;
+  background: rgba(24,157,172,0.1);
   transform: translateY(-2px);
 }
 
 .nav-link.get-involved:hover {
   color: #fff;
-  background: linear-gradient(120deg, #764ba2 0%, #667eea 100%);
-  border: 2px solid #764ba2;
+  background: linear-gradient(120deg, #43c6db 0%, #189dac 100%);
+  border: 2px solid #43c6db;
 }
 
 /* Dropdown styles */
@@ -124,7 +124,7 @@ body {
   top: 100%;
   background: #fff;
   min-width: 100%;
-  box-shadow: 0 8px 24px rgba(100,30,148,0.10);
+  box-shadow: 0 8px 24px rgba(24,157,172,0.10);
   border-radius: 0 0 12px 12px;
   z-index: 1001;
   list-style: none;
@@ -139,7 +139,7 @@ body {
   display: block;
   width: 100%;
   padding: 1rem 1.5rem;
-  color: #641e94;
+  color: #189dac;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.5rem;
@@ -149,8 +149,8 @@ body {
 }
 
 .dropdown-link:hover {
-  background: rgba(100,30,148,0.08);
-  color: #333;
+  background: rgba(24,157,172,0.08);
+  color: #12707c;
 }
 
 .mobile-menu-toggle {
@@ -179,7 +179,7 @@ body {
   min-height: 91.5vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #155e75 0%, #38bdf8 100%);
   
   color: white;
   overflow: hidden;
@@ -191,8 +191,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('../assets/hannah-busing-Zyx1bK9mqmA-unsplash.jpg') center/cover;
-  opacity: 0.5;
+  background: url('../assets/background-1.jpg') center/cover;
+  opacity: 1;
   z-index: 2;
   transform: scalex(-1);
 }
@@ -229,12 +229,13 @@ body {
 }
 
 .hero-gradient-box {
-  background: linear-gradient(120deg, #641e94 0%, #667eea 100%);
+  
+  background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #a2ebf7 100%);
   border-top-right-radius: 32px;
   border-bottom-right-radius: 48px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  box-shadow: 0 8px 32px rgba(100,30,148,0.10);
+  box-shadow: 0 8px 32px rgba(24,157,172,0.10);
   color: #fff;
   max-width: 850px;
   width: 90vw;
@@ -258,14 +259,16 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #8de4f1 100%);
   color: white;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #3730a3 100%);
+  
+  background: linear-gradient(-110deg,  #1294a8 1%, #43c6db 66%, #8de4f1 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 10px 25px rgba(24,157,172,0.3);
 }
 
 .btn-secondary {
@@ -332,7 +335,8 @@ body {
 .card-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #a2ebf7 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -367,6 +371,7 @@ body {
   text-decoration: none;
   color: inherit;
   display: block;
+  border: none;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -401,7 +406,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, rgba(100, 30, 148, 0.95) 0%, rgba(102, 126, 234, 0.95) 100%);
+  background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #8de4f1 100%);
   color: white;
   padding: 1.5rem;
   backdrop-filter: blur(10px);
@@ -453,10 +458,10 @@ body {
 }
 
 .collaborate-list li::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   left: 0;
-  color: #641e94;
+  color: #189dac;
   font-weight: bold;
 }
 
@@ -490,7 +495,8 @@ body {
 .contact-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #a2ebf7 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -800,7 +806,7 @@ body {
     gap: 0.5rem;
     padding: 1rem 2rem;
     display: none;
-    box-shadow: 0 8px 24px rgba(100,30,148,0.10);
+    box-shadow: 0 8px 24px rgba(24,157,172,0.10);
     border-radius: 0 0 12px 12px;
     z-index: 1001;
   }

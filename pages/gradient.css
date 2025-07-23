@@ -1,0 +1,8 @@
+.gradient-test {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(170deg, #3a3aaf 0%, #43c6db 33%, #e0f7fa 50%, #43c6db 66%, #3a3aaf 100%);
+}

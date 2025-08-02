@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 32px;
   width: 100%;
@@ -197,7 +197,7 @@ body {
 
 /* Our Goals Content Styles */
 .goals-hero {
-  padding: 4.72rem 0 1.6rem 0;
+  padding: 4rem 0 1.6rem 0;
   text-align: center;
 }
 
@@ -298,7 +298,7 @@ body {
     --nav-gap: 1.5rem;
   }
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 0 24px;
   }
   .logo {
@@ -308,6 +308,29 @@ body {
   .nav-link, .dropdown-link {
     font-size: 1.1rem;
     padding: 0.7rem 1.1rem;
+  }
+}
+
+@media (max-width: 1700px) and (min-width: 1201px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 20px;
+  }
+}
+
+/* New breakpoint specifically for MacBook 1440x812 */
+@media (max-width: 1440px) and (min-width: 1201px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  .nav-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.7rem;
+  }
+  .dropdown-link {
+    font-size: 0.85rem;
+    padding: 0.8rem 1.2rem;
   }
 }
 

@@ -19,8 +19,9 @@ body {
   overflow-x: hidden;
 }
 
+/* Updated container width for better MacBook compatibility */
 .container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 32px;
   width: 100%;
@@ -245,8 +246,8 @@ body {
   animation: fadeInUp 1s ease 0.4s both;
 }
 
+/* Updated hero gradient box positioning for MacBook screens */
 .hero-gradient-box {
-  
   background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #a2ebf7 100%);
   border-top-right-radius: 32px;
   border-bottom-right-radius: 48px;
@@ -260,7 +261,7 @@ body {
   margin: 5.6rem auto 1.6rem auto;
   position: relative;
   padding: clamp(0.96rem, 2.4vw, 1.76rem) clamp(0.8rem, 3.2vw, 2rem) clamp(0.96rem, 2.4vw, 1.76rem) clamp(0.8rem, 2.4vw, 2rem);
-  left: -15.2rem;
+  left: -15rem;
 }
 
 .btn {
@@ -332,8 +333,10 @@ body {
 /* About Section */
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .about-card {
@@ -379,11 +382,12 @@ body {
 }
 
 /* Media Section */
+/* Updated media grid for better MacBook layout */
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -460,9 +464,9 @@ body {
 /* Events Section */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -541,8 +545,10 @@ body {
 .collaborate-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.6rem;
+  gap: 2rem;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .section-header h3 {
@@ -589,6 +595,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .contact-info {
@@ -785,13 +793,13 @@ body {
   }
 }
 
-/* Responsive Styles */
+/* Updated responsive breakpoints for MacBook optimization */
 @media (max-width: 1900px) {
   :root {
     --nav-gap: 1.5rem;
   }
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 0 24px;
   }
   .logo {
@@ -820,7 +828,8 @@ body {
     font-size: 1.05rem;
   }
   .media-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
   }
 }
 
@@ -828,7 +837,7 @@ body {
   .hero-gradient-box {
     max-width: 700px;
     width: 75vw;
-    left: -10vw;
+    left: 0;
   }
   .hero-title {
     font-size: clamp(1.7rem, 3vw, 3.5rem);
@@ -842,6 +851,50 @@ body {
   .btn {
     padding: 10px 22px;
     font-size: 1rem;
+  }
+  .media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* New breakpoint specifically for MacBook 1440x812 */
+@media (max-width: 1440px) and (min-width: 1201px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+ 
+    .nav-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.7rem;
+  }
+  .dropdown-link {
+    font-size: 0.85rem;
+    padding: 0.8rem 1.2rem;
+  }
+  .hero-gradient-box {
+    max-width: 600px;
+    width: 70vw;
+    left: -15rem;
+    margin: 5rem auto 2rem auto;
+  }
+  .media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  .media-tile {
+    height: 300px;
+  }
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  .collaborate-content {
+    gap: 2rem;
+  }
+  .collaborate-image img {
+    height: 280px;
   }
 }
 
@@ -880,11 +933,19 @@ body {
     font-size: 0.95rem;
   }
   .media-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1000px;
   }
   .media-image {
     height: 250px;
+  }
+  .about-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
   }
 }
 
@@ -892,8 +953,8 @@ body {
   .hero-gradient-box {
     max-width: 600px;
     width: 95vw;
-    left: -5vw;
-    margin: 6rem auto 2rem 0;
+    left: 0;
+    margin: 6rem auto 2rem auto;
     padding: clamp(0.7rem, 2.5vw, 1.8rem) clamp(0.5rem, 3vw, 2.5rem) clamp(0.7rem, 2.5vw, 1.8rem) clamp(0.5rem, 2.5vw, 1.8rem);
   }
   
@@ -909,6 +970,21 @@ body {
   .btn {
     padding: 8px 20px;
     font-size: 1rem;
+  }
+  
+  .media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
   
   .media-banner {

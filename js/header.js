@@ -4,13 +4,13 @@ class HeaderNavigation {
         this.currentPage = this.getCurrentPage();
         this.navData = {
             logo: {
-                src: '../assets/logos/Voices_logo.jpg',
+                src: '../assets/logos/voices_logo.jpg',
                 alt: 'Voices for Palliative Care Logo',
             },
             menuItems: [
                 {
                     text: 'Home',
-                    href: 'index.html',
+                    href: '/',
                     isDropdown: false
                 },
                 {
@@ -18,9 +18,9 @@ class HeaderNavigation {
                     href: '#about',
                     isDropdown: true,
                     dropdownItems: [
-                        { text: 'Who we are', href: 'meet-the-team.html' },
-                        { text: 'What we do', href: 'who-we-are.html' },
-                        { text: 'Our impact', href: 'our-goals.html' }
+                        { text: 'Who we are', href: '/meet-the-team' },
+                        { text: 'What we do', href: '/who-we-are' },
+                        { text: 'Our impact', href: '/our-goals' }
                     ]
                 },
                 {
@@ -45,8 +45,8 @@ class HeaderNavigation {
                     isDropdown: true,
                     isSpecial: true,
                     dropdownItems: [
-                        { text: 'Consumer and community members', href: 'member.html' },
-                        { text: 'Researcher, clinicians and policymakers', href: 'engage.html' }
+                        { text: 'Consumer and community members', href: '/member' },
+                        { text: 'Researcher, clinicians and policymakers', href: '/engage' }
                     ]
                 }
             ]
@@ -67,9 +67,9 @@ class HeaderNavigation {
             return href;
         }
         
-        // If it's an anchor link (starts with #), redirect to index.html with the anchor
+        // If it's an anchor link (starts with #), redirect to root with the anchor
         if (href.startsWith('#')) {
-            return `index.html${href}`;
+            return `/${href}`;
         }
         
         // For other pages, use the href as is
@@ -92,7 +92,7 @@ class HeaderNavigation {
         logoLeft.className = 'logo-left';
         
         const logoLink = document.createElement('a');
-        logoLink.href = 'index.html';
+        logoLink.href = '/';
         logoLink.className = 'logo-link';
         
         const logo = document.createElement('img');

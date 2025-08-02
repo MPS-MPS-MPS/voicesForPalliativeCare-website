@@ -30,7 +30,7 @@ body {
   width: 100%;
 }
 
-/* Header Styles */
+/* Header */
 .header {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(15px);
@@ -118,7 +118,7 @@ body {
   border: 2px solid #43c6db;
 }
 
-/* Dropdown styles */
+/* Dropdown */
 .nav-item.dropdown {
   position: relative;
 }
@@ -195,7 +195,7 @@ body {
   transform-origin: left center;
 }
 
-/* Our Goals Content Styles */
+/* Our Goals Content */
 .goals-hero {
   padding: 4rem 0 1.6rem 0;
   text-align: center;
@@ -226,7 +226,6 @@ body {
   text-align: left;
 }
 
-/* Two-column layout for content and image */
 .content-image-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -292,7 +291,7 @@ body {
   margin: 0;
 }
 
-/* Download section styles */
+/* Download section */
 .download-section {
   margin-top: 2rem;
   padding: 1.5rem;
@@ -340,7 +339,6 @@ body {
   font-size: 1rem;
 }
 
-/* Multiple download buttons layout */
 .download-buttons {
   display: flex;
   flex-direction: column;
@@ -348,7 +346,6 @@ body {
   margin-top: 1rem;
 }
 
-/* Email link styling */
 .email-link {
   color: #189dac;
   text-decoration: none;
@@ -361,7 +358,6 @@ body {
   text-decoration: underline;
 }
 
-/* Contact info styling */
 .contact-info {
   margin-top: 1.5rem;
   padding-top: 1rem;
@@ -396,7 +392,6 @@ body {
 }
 
 /* Responsive Styles */
-/* Updated responsive breakpoints for MacBook optimization */
 @media (max-width: 1900px) {
   :root {
     --nav-gap: 1.5rem;
@@ -422,7 +417,6 @@ body {
   }
 }
 
-/* New breakpoint specifically for MacBook 1440x812 */
 @media (max-width: 1440px) and (min-width: 1201px) {
   .container {
     max-width: 1200px;
@@ -542,7 +536,6 @@ body {
   }
 }
 
-/* Responsive styles for content-image layout */
 @media (max-width: 900px) {
   .content-image-wrapper {
     grid-template-columns: 1fr;

@@ -19,7 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Updated container width for better MacBook compatibility */
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -27,7 +26,7 @@ body {
   width: 100%;
 }
 
-/* Header Styles */
+/* Header  */
 .header {
   background: #fff;
   backdrop-filter: blur(15px);
@@ -115,7 +114,7 @@ body {
   border: 2px solid #43c6db;
 }
 
-/* Dropdown styles */
+/* Dropdown  */
 .nav-item.dropdown {
   position: relative;
 }
@@ -192,7 +191,6 @@ body {
   transform-origin: left center;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   min-height: 90vh;
@@ -210,7 +208,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('../assets/iStock-1333500786.jpg') center/cover;
+  background: url('../assets/iStock-679543408.jpg') center/cover;
   opacity: .8;
   z-index: 2;
 }
@@ -246,7 +244,6 @@ body {
   animation: fadeInUp 1s ease 0.4s both;
 }
 
-/* Updated hero gradient box positioning for MacBook screens */
 .hero-gradient-box {
   background: linear-gradient(110deg,  #1294a8 1%, #43c6db 66%, #a2ebf7 100%);
   border-top-right-radius: 32px;
@@ -261,7 +258,7 @@ body {
   margin: 5.6rem auto 1.6rem auto;
   position: relative;
   padding: clamp(0.96rem, 2.4vw, 1.76rem) clamp(0.8rem, 3.2vw, 2rem) clamp(0.96rem, 2.4vw, 1.76rem) clamp(0.8rem, 2.4vw, 2rem);
-  left: -15rem;
+  left: -17rem;
 }
 
 .btn {
@@ -302,7 +299,6 @@ body {
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
 
-/* Section Styles */
 .section {
   padding: 4rem 0;
 }
@@ -330,7 +326,7 @@ body {
   margin: 0 auto;
 }
 
-/* About Section */
+/* About  */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -381,8 +377,7 @@ body {
   font-size: var(--font-body);
 }
 
-/* Media Section */
-/* Updated media grid for better MacBook layout */
+/* Media  */
 .media-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -461,7 +456,7 @@ body {
   margin: 0;
 }
 
-/* Events Section */
+/* Events  */
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -541,7 +536,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* Collaborate Section */
+/* Collaborate */
 .collaborate-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -590,7 +585,7 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section */
+/* Contact */
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -793,7 +788,6 @@ body {
   }
 }
 
-/* Updated responsive breakpoints for MacBook optimization */
 @media (max-width: 1900px) {
   :root {
     --nav-gap: 1.5rem;
@@ -858,7 +852,6 @@ body {
   }
 }
 
-/* New breakpoint specifically for MacBook 1440x812 */
 @media (max-width: 1440px) and (min-width: 1201px) {
   .container {
     max-width: 1200px;

@@ -26,7 +26,7 @@
     width: 100%;
   }
   
-  /* Header Styles */
+  /* Header */
   .header {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(15px);
@@ -276,7 +276,6 @@
 }
   
   /* Responsive Styles for Nav Bar */
-  /* Updated responsive breakpoints for MacBook optimization */
   @media (max-width: 1900px) {
     :root {
       --nav-gap: 1.5rem;
@@ -302,7 +301,6 @@
     }
   }
 
-  /* New breakpoint specifically for MacBook 1440x812 */
   @media (max-width: 1440px) and (min-width: 1201px) {
     .container {
       max-width: 1200px;
@@ -651,7 +649,7 @@
   opacity: 1;
 }
 
-/* Footer Responsive Styles */
+/* Footer Resp Styles */
 @media (max-width: 780px) {
   .footer-content {
     grid-template-columns: repeat(2, 1fr);

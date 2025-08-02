@@ -1,4 +1,4 @@
-// Header Navigation Component
+// header nav
 class HeaderNavigation {
     constructor() {
         this.currentPage = this.getCurrentPage();
@@ -53,30 +53,27 @@ class HeaderNavigation {
         };
     }
 
-    // Get current page name
+    // Get current page 
     getCurrentPage() {
         const path = window.location.pathname;
         const filename = path.split('/').pop();
         return filename || 'index.html';
     }
 
-    // Get the correct href for navigation items
+    // Get the correct href 
     getNavigationHref(href) {
-        // If we're on the index page, use the href as is
         if (this.currentPage === 'index.html' || this.currentPage === '') {
             return href;
         }
         
-        // If it's an anchor link (starts with #), redirect to root with the anchor
         if (href.startsWith('#')) {
             return `/${href}`;
         }
         
-        // For other pages, use the href as is
         return href;
     }
 
-    // Create header element
+    // Create header el
     createHeader() {
         const header = document.createElement('header');
         header.className = 'header';
@@ -87,7 +84,7 @@ class HeaderNavigation {
         const headerContent = document.createElement('div');
         headerContent.className = 'header-content';
         
-        // Add logo
+    
         const logoLeft = document.createElement('div');
         logoLeft.className = 'logo-left';
         
@@ -102,15 +99,13 @@ class HeaderNavigation {
         
         logoLink.appendChild(logo);
         logoLeft.appendChild(logoLink);
-        
-        // Add navigation
+      
         const nav = document.createElement('nav');
         nav.className = 'nav';
         
         const navList = document.createElement('ul');
         navList.className = 'nav-list';
-        
-        // Create menu items
+     
         this.navData.menuItems.forEach(item => {
             const li = this.createMenuItem(item);
             navList.appendChild(li);
@@ -118,10 +113,8 @@ class HeaderNavigation {
         
         nav.appendChild(navList);
         
-        // Add mobile menu toggle
         const mobileToggle = this.createMobileToggle();
         
-        // Assemble header
         headerContent.appendChild(logoLeft);
         headerContent.appendChild(nav);
         headerContent.appendChild(mobileToggle);
@@ -132,7 +125,7 @@ class HeaderNavigation {
         return header;
     }
 
-    // Create individual menu item
+    //  menu item
     createMenuItem(item) {
         const li = document.createElement('li');
         
@@ -144,7 +137,6 @@ class HeaderNavigation {
             link.className = item.isSpecial ? 'nav-link get-involved' : 'nav-link';
             link.textContent = item.text;
             
-            // Prevent navigation for dropdown parent links
             link.addEventListener('click', (e) => {
                 e.preventDefault();
             });
@@ -156,7 +148,6 @@ class HeaderNavigation {
             link.appendChild(arrow);
             li.appendChild(link);
             
-            // Create dropdown menu
             const dropdownMenu = document.createElement('ul');
             dropdownMenu.className = 'dropdown-menu';
             
@@ -182,7 +173,6 @@ class HeaderNavigation {
         return li;
     }
 
-    // Create mobile menu toggle
     createMobileToggle() {
         const toggle = document.createElement('div');
         toggle.className = 'mobile-menu-toggle';
@@ -192,7 +182,6 @@ class HeaderNavigation {
             toggle.appendChild(span);
         }
         
-        // Add mobile menu functionality
         toggle.addEventListener('click', () => {
             const nav = document.querySelector('.nav');
             nav.classList.toggle('active');
@@ -202,19 +191,15 @@ class HeaderNavigation {
         return toggle;
     }
 
-    // Initialize header
     init() {
         const body = document.body;
         const header = this.createHeader();
         
-        // Insert header at the beginning of body
         body.insertBefore(header, body.firstChild);
         
-        // Add smooth scrolling for anchor links
         this.addSmoothScrolling();
     }
 
-    // Add smooth scrolling functionality
     addSmoothScrolling() {
         const links = document.querySelectorAll('a[href^="#"]');
         
@@ -237,7 +222,6 @@ class HeaderNavigation {
             });
         });
 
-        // Handle links that redirect to index.html with anchors
         const indexLinks = document.querySelectorAll('a[href^="index.html#"]');
         
         indexLinks.forEach(link => {
@@ -247,14 +231,13 @@ class HeaderNavigation {
                 const href = link.getAttribute('href');
                 const targetId = href.split('#')[1];
                 
-                // Navigate to index.html
                 window.location.href = href;
             });
         });
     }
 }
 
-// Initialize header when DOM is loaded
+// initialize header 
 document.addEventListener('DOMContentLoaded', () => {
     const headerNav = new HeaderNavigation();
     headerNav.init();

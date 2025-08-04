@@ -18,9 +18,9 @@ class HeaderNavigation {
                     href: '#about',
                     isDropdown: true,
                     dropdownItems: [
-                        { text: 'Who we are', href: '/meet-the-team' },
-                        { text: 'What we do', href: '/who-we-are' },
-                        { text: 'Our impact', href: '/our-goals' }
+                        { text: 'Who we are', href: '/who-we-are' },
+                        { text: 'What we do', href: '/what-we-do' },
+                        { text: 'Our impact', href: '/our-impact' }
                     ]
                 },
                 {
@@ -45,15 +45,15 @@ class HeaderNavigation {
                     isDropdown: true,
                     isSpecial: true,
                     dropdownItems: [
-                        { text: 'Consumer and community members', href: '/member' },
-                        { text: 'Researcher, clinicians and policymakers', href: '/engage' }
+                        { text: 'Consumer and community members', href: '/consumers' },
+                        { text: 'Researcher, clinicians and policymakers', href: '/researchers' }
                     ]
                 }
             ]
         };
     }
 
-    // Get current page 
+    // Get page 
     getCurrentPage() {
         const path = window.location.pathname;
         const filename = path.split('/').pop();
